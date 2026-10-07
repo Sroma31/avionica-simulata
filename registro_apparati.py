@@ -23,13 +23,13 @@ def aggiorna_stato(codice, nuovo_stato):
         print(f"Errore: Apparato '{codice}' non trovato.")
         return False
 
+    nuovo_stato = nuovo_stato.upper()
+
     if nuovo_stato not in STATI_AMMESSI:
         print(f"Errore: Stato '{nuovo_stato}' non valido.")
         return False
 
     APPARATI[codice]["stato"] = nuovo_stato
     return True
-
-
 
 
