@@ -14,6 +14,13 @@ def filtra_per_bus(apparati, bus):
     ]
 
 
+def filtra_per_tipo(apparati, tipo):
+    return [
+        (codice, dati)
+        for codice, dati in apparati.items()
+        if dati["tipo"] == tipo
+    ]
+
 def filtra_per_nome(apparati, nome, contiene=True, case_insensitive=True):
     if nome is None:
         return []
